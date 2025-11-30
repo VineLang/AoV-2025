@@ -13,16 +13,16 @@ You can also write helper functions in `util/util.vi`.
 A convenience [Nushell](https://www.nushell.sh/book/installation.html) script is provided to facilitate running the solutions.
 
 ```sh
-./run.nu <day-number>
+./run.nu <n>
 ```
 
-It expects an input file at the path `day_<day-number>/input`.
+It expects an input file at the path `day_<n>/input`.
 It will automatically download the correct input if you put your [Advent of Code token](https://github.com/wimglenn/advent-of-code-wim/issues/1) into a file named `token` in the root of the project.
 
-You can put test inputs at the path `day_<day-number>/<test-name>`, and select that input with `./run.nu <day-number> -i <test-name>`.
+You can put test inputs at the path `day_<n>/<test-name>`, and select that input with `./run.nu <n> -i <test-name>`.
 
 You can also invoke the Vine CLI manually instead of using the script with something like
 ```sh
-cat day_<day-number>/input | vine run day_<day-number>/day_<day-number>.vi --lib util/util.vi
+cat day_<n>/input | vine run day_<n>/day_<n>.vi --lib util/util.vi
 ```
 
