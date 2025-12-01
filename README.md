@@ -20,6 +20,13 @@ A convenience [Nushell](https://www.nushell.sh/book/installation.html) script is
 
 It will run `day_<n>/day<n>.vi`, passing the file `day_<n>/input` as input.
 
+Additional arguments will be passed to `vine run`; to get the performance results for the solution, use `-d`:
+
+
+```sh
+./run.nu <n> -d
+```
+
 #### Auto Input Download
 
 The script will automatically download your official input if you put your [Advent of Code token](https://github.com/wimglenn/advent-of-code-wim/issues/1) into a file named `token` in the root of the project.
@@ -35,6 +42,6 @@ You can put a test input into a file `day_<n>/<test-name>` and then use that inp
 
 You can also invoke the Vine CLI manually instead of using the script with something like
 ```sh
-cat day_<n>/input | vine run day_<n>/day_<n>.vi --lib util/util.vi
+cat day_<n>/input | vine run day_<n>/day_<n>.vi --lib util/util.vi --depth
 ```
 
